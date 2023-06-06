@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fantaseas",
+  "info": {
+    "singularName": "fantasea",
+    "pluralName": "fantaseas",
+    "displayName": "Fantasea",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "oldAdult": {
+      "type": "decimal"
+    },
+    "oldChild": {
+      "type": "decimal"
+    },
+    "adultPrice": {
+      "type": "decimal"
+    },
+    "childPrice": {
+      "type": "decimal"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pre_tours",
+  "info": {
+    "singularName": "pre-tour",
+    "pluralName": "pre-tours",
+    "displayName": "Pre Tour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "descList": {
+      "type": "json"
+    },
+    "adultPrice": {
+      "type": "decimal"
+    },
+    "childPrice": {
+      "type": "decimal"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "pre_tours"
+    }
+  }
+}
