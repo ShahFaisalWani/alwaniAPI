@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phuket_destinations",
+  "info": {
+    "singularName": "phuket-destination",
+    "pluralName": "phuket-destinations",
+    "displayName": "Phuket-Destination",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "overview": {
+      "type": "json"
+    },
+    "itinerary": {
+      "type": "json"
+    },
+    "location": {
+      "type": "json"
+    },
+    "inclusion": {
+      "type": "json"
+    },
+    "adult_price": {
+      "type": "decimal"
+    },
+    "child_price": {
+      "type": "decimal"
+    },
+    "old_adult_price": {
+      "type": "decimal"
+    },
+    "old_child_price": {
+      "type": "decimal"
+    },
+    "disabled_days": {
+      "type": "json"
+    },
+    "main_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "is_popular": {
+      "type": "boolean",
+      "required": false
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city"
+    }
+  }
+}
